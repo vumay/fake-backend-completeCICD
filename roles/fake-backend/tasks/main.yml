@@ -20,14 +20,14 @@
     - build
     - deploy
 
-- name: copy devops private key file
-  copy:
-    content: '{{ gitlab_private_key }}'
-    dest: "{{ home }}/.ssh/id_rsa"
-    owner: centos
-  tags:
-    - build
-    - deploy
+#- name: copy devops private key file
+#  copy:
+#    content: '{{ gitlab_private_key }}'
+#    dest: "{{ home }}/.ssh/id_rsa"
+#    owner: centos
+#  tags:
+#    - build
+#    - deploy
 
 - name: retrieve battleboat code source
   git:

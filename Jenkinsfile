@@ -26,7 +26,7 @@ pipeline {
                 sh 'mdl --version'
                 sh 'mdl --style all --warnings --git-recurse \${WORKSPACE}'
             }
-        }
+       /* }
         stage('Prepare ansible environment') {
             agent any
             environment {
@@ -37,7 +37,7 @@ pipeline {
                 sh 'echo \$VAULTKEY > vault.key'
                 sh 'cp \$DEVOPSKEY id_rsa'
                 sh 'chmod 600 id_rsa'
-            }
+            }*/
         }
         stage('Test and deploy the application in preproduction') {
              agent { docker { image 'registry.gitlab.com/robconnolly/docker-ansible:latest' } }
