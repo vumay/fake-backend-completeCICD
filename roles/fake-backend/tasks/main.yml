@@ -11,14 +11,14 @@
     password: "{{ docker_hub_password }}"
   tags:
     - build
+
 - name: create project directory
   file:
     path: "{{ home }}/fake-backend"
     state: directory
   tags:
     - build
-    - preprod
-    - prod
+    - deploy
 
 - name: copy devops private key file
   copy:
@@ -27,8 +27,7 @@
     owner: centos
   tags:
     - build
-    - preprod
-    - prod
+    - deploy
 
 - name: retrieve battleboat code source
   git:
@@ -41,9 +40,8 @@
     version: master
   tags:
     - build
-    - preprod
-    - prod
-
+    - deploy
+   
 - name: Build api image and push it to Docker Hub
   docker_image:
     path: "{{ home }}/fake-backend/"
@@ -59,8 +57,8 @@
   docker_network:
     name: battleboat
   tags:
-    - preprod
-    - prod
+    - deploy
+
 # deploy api
 
 - name: Deploy mysql db
@@ -82,9 +80,8 @@
     ports:
       - "3306:3306"
   tags:
-    - preprod
-    - prod
-
+    - deploy
+   
 # deploy frontend
 
 - name: Deploy frontend
@@ -106,5 +103,4 @@
     ports:
       - "80:3000"
   tags:
-    - preprod
-    - prod
+    - deploy
