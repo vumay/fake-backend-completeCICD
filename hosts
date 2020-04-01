@@ -1,13 +1,13 @@
 [build]
 #localhost ansible_connection=local
-ec2-3-92-204-79.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ec2-18-208-183-224.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [preprod]
-ec2-52-90-45-155.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ec2-3-83-159-250.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 
 [prod]
-ec2-3-91-242-173.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ec2-54-174-250-215.compute-1.amazonaws.com ansible_user=centos ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 
 #[all:children]
