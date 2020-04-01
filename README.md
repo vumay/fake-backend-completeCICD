@@ -1,5 +1,5 @@
 # Description
 
-This repository is used to demonstrate how to use Jenkinsfile to build and deploy application
+This repository is used to demonstrate how to use Jenkinsfile to build and deploy application with Pipeline
 
 
