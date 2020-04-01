@@ -5,15 +5,15 @@
     - block:
         - name: Check that you can connect to webpage
           uri:
-            url: http://3.91.242.173
+            url: http://54.174.250.215
           retries: 8
-          delay: 5
+          delay: 15
 
         - name: Check webservice application production
           uri:
-            url: http://3.91.242.173/health
+            url: http://54.174.250.215/health
             method: GET
           retries: 8
-          delay: 5
+          delay: 15
       tags:
         - prod
