@@ -92,5 +92,5 @@ Docker, docker-compose, Ansible, Tags, Playbooks, Roles, Galaxy, Jenkins, Shared
 
 ### Reference repository
 
-+ [Source code development](https://github.com/vumay/fake-backend/tree/master/fake-backend.git "Source code development")
++ [Source code development](https://github.com/vumay/fake-backend/tree/master/fake-backend "Source code development")
 + [Shared-library](https://github.com/vumay/shared-library.git "Shared-library")
